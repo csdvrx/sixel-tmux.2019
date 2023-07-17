@@ -14,7 +14,7 @@ dist_EXTRA_tmux_SOURCES = compat/*.[ch]
 AM_CPPFLAGS += @XOPEN_DEFINES@ -DTMUX_CONF="\"$(sysconfdir)/tmux.conf\""
 
 # Additional object files.
-LDADD = $(LIBOBJS)
+LDADD = $(LIBOBJS) -lm
 
 # Set flags for gcc.
 if IS_GCC

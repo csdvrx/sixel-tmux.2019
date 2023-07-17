@@ -141,7 +141,7 @@ make_label(const char *label, char **cause)
 #if __MSYS__ || __CYGWIN__ || _WIN32 || _WIN64
         if (sb.st_uid != uid) {
 #else
-        if (sb.st_uid != uid || (sb.st_mode & PERMS) != 0) {
+        if (sb.st_uid != uid) {
 #endif
 		errno = EACCES;
 		goto fail;
